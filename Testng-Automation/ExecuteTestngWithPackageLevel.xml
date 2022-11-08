@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Automation">
+	<test name="Users and Products">
+		<packages>
+			<package name="com.sgtesting.users" />
+			<package name="com.sgtesting.products" />
+		</packages>
+	</test>
+</suite>
