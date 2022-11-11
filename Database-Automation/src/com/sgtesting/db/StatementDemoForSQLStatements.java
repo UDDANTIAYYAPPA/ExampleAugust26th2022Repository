@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class StatementDemoForSQLStatements {
 	public static void main(String[] args) {
-	//	getRecordsFromDatabase();
+		getRecordsFromDatabase();
 		insertRecords();
 	}
 	private static void getRecordsFromDatabase()
@@ -20,7 +20,7 @@ public class StatementDemoForSQLStatements {
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			System.out.println("Connection has successful!!!");
 			Statement stmt=conn.createStatement();
-			String strQuery="select * from dept2";
+			String strQuery="select * from dept";
 			ResultSet rs=stmt.executeQuery(strQuery);
 			ResultSetMetaData rsmeta=rs.getMetaData();
 			String colname1=rsmeta.getColumnName(1);
@@ -65,7 +65,7 @@ public class StatementDemoForSQLStatements {
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			
 			Statement stmt=conn.createStatement();
-			String strQuery="insert into dept2 values(80,'INSURANCE','BANGALORE')";
+			String strQuery="insert into dept values(80,'INSURANCE','BANGALORE')";
 			stmt.executeUpdate(strQuery);
 			System.out.println("Inserted the records successfully!!!");
 		}catch (Exception e) 

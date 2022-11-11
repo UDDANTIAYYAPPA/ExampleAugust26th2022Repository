@@ -23,7 +23,7 @@ public class PreparedStatementDemoForSQLStatements {
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			System.out.println("Connection has successful!!!");
 			
-			String strQuery="select * from dept2";
+			String strQuery="select * from dept";
 			PreparedStatement stmt=conn.prepareStatement(strQuery);
 			ResultSet rs=stmt.executeQuery();
 			ResultSetMetaData rsmeta=rs.getMetaData();
@@ -68,7 +68,7 @@ public class PreparedStatementDemoForSQLStatements {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			
-			String strQuery="insert into dept2 values(80,'INSURANCE','BANGALORE')";
+			String strQuery="insert into dept values(80,'INSURANCE','BANGALORE')";
 			PreparedStatement stmt=conn.prepareStatement(strQuery);
 			stmt.executeUpdate();
 			System.out.println("Inserted the records successfully!!!");

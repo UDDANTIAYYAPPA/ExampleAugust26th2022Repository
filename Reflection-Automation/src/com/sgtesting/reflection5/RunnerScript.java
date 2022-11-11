@@ -2,6 +2,7 @@ package com.sgtesting.reflection5;
 
 import java.io.FileInputStream;
 import java.lang.reflect.Method;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -16,19 +17,19 @@ public class RunnerScript {
 
 	}
 	
-	private static void executeMethods()
+	private static  void executeMethods()
 	{
 		FileInputStream fin=null;
 		Workbook wb=null;
-		Sheet sh=null;
+		Set sh=null;
 		Row row=null;
 		Cell cell=null;
 		try
 		{
 			fin=new FileInputStream(".\\DataFiles\\MethodNames.xlsx");
-			wb=new XSSFWorkbook(fin);
+			wb=new Workbook(fin);
 			sh=wb.getSheet("Sheet1");
-			int rc=sh.getPhysicalNumberOfRows();
+			int rc=``sh.getPhysicalNumberOfRows();
 			for(int r=1;r<rc;r++)
 			{
 				row=sh.getRow(r);
